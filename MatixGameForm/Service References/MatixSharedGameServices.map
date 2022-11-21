@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceReference>
+	<ProxyGenerationParameters
+		ServiceReferenceUri="net.tcp://localhost:8007/MatixSharedGameServices"
+		Name="MatixSharedGameServices"
+		NotifyPropertyChange="True"
+		UseObservableCollection="False">
+	</ProxyGenerationParameters>
+	<EndPoints>
+		<EndPoint
+			Address="net.tcp://localhost:8007/MatixSharedGameServices"
+			BindingConfiguration="NetTcpBinding_IMatixSharedGame"
+			Contract="MatixGameForm.MatixSharedGameServices.IMatixSharedGame"
+			>
+		</EndPoint>
+	</EndPoints>
+</ServiceReference>

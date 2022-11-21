@@ -1,0 +1,165 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20E0A255-B973-4BF9-994C-F16A825A0600}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MatixGameForm</RootNamespace>
+    <AssemblyName>MatixGameForm</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UdpTransport, Version=1.0.2666.39754, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TechnologySamples\Extensibility\Transport\Udp\CS\UdpTransport\bin\UdpTransport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectToSharedGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectToSharedGameDialog.Designer.cs">
+      <DependentUpon>ConnectToSharedGameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlInvoker.cs" />
+    <Compile Include="DummyCallBack.cs" />
+    <Compile Include="EMatixMoveType.cs" />
+    <Compile Include="EMatixPlayerType.cs" />
+    <Compile Include="ESharedPlayersOptions.cs" />
+    <Compile Include="HostAllServicesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostAllServicesView.Designer.cs">
+      <DependentUpon>HostAllServicesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMatixSharedGame.cs" />
+    <Compile Include="IMatixSharingPlayer.cs" />
+    <Compile Include="IPingable.cs" />
+    <Compile Include="IRemoteAddressesCollector.cs" />
+    <Compile Include="JoinedGameClient.cs" />
+    <Compile Include="MatixBoardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatixBoardView.Designer.cs">
+      <DependentUpon>MatixBoardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatixBoard.cs" />
+    <Compile Include="MatixGame.cs" />
+    <Compile Include="MatixGameMoveSearchController.cs" />
+    <Compile Include="MatixMove.cs" />
+    <Compile Include="MatixOptions.cs" />
+    <Compile Include="MatixOptionsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatixOptionsView.Designer.cs">
+      <DependentUpon>MatixOptionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatixPlayer.cs" />
+    <Compile Include="MatixSharedGameInformation.cs" />
+    <Compile Include="MatixStage.cs" />
+    <Compile Include="NewSharedGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSharedGameDialog.Designer.cs">
+      <DependentUpon>NewSharedGameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pair.cs" />
+    <Compile Include="PingableService.cs" />
+    <Compile Include="PlayerFeatures.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConnectToSharedGameDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConnectToSharedGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostAllServicesView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HostAllServicesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatixBoardView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MatixBoardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatixOptionsView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MatixOptionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSharedGameDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSharedGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MatixSharedGameServices.map" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MatixSharedGameOptions.cs" />
+    <Compile Include="RemoteGameCollectorService.cs" />
+    <Compile Include="Service References\MatixSharedGameServices.cs">
+      <DependentUpon>MatixSharedGameServices.map</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RemoteGameCollectorClient.cs" />
+    <Compile Include="Service References\UDPMulticastListenerClient.cs" />
+    <Compile Include="SharedGameService.cs" />
+    <Compile Include="URILocalToRemoteTranslator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AplhaBetaGame\AplhaBetaGame.csproj">
+      <Project>{EC493915-5E95-4EF4-82B0-DAE89EAFA293}</Project>
+      <Name>AplhaBetaGame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
